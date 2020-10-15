@@ -1,9 +1,9 @@
 #Szitás-Kiss Vanda
-print("Ez a program egy kúp adatait kéri be majd területét számolja ki.")
+print("Ez a program egy kúp adatait kéri be majd térfogatát számolja ki.")
 sugár = float(input("Sugár:"))
 magasság = float(input("Magasság:"))
 
 import math
 
-terület = (((sugár**2 *math.pi)/3)*magasság)
-print("Kúp területe=", terület)
+térfogat = (((sugár**2 *math.pi)*1/3)*magasság)
+print("Kúp térfogata=", térfogat)
