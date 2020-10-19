@@ -3,15 +3,13 @@ magassag = float(input("Magasság:"))
 kor = float(input("Kor:"))
 sport = input("Sportol? (Igen/Nem)")
 
-tmi = 1.3*testsuly / magassag**2.5
-tmics = 1.3*testsuly / magassag**3
-tmip = 1.3*testsuly / magassag**2
-
 	
 
 def normal():
 	
 	tmi = 1.3*testsuly / magassag**2.5
+	
+	print("Testtömegindex:", tmi)
 	
 	if tmi < 16:
 		print("Súlyos soványság.")
@@ -41,6 +39,8 @@ def idos_sport():
 	
 	tmi = 1.3*testsuly / magassag**2.5
 	
+	print("Testtömegindex:", tmi)
+	
 	if tmi < 16:
 		print("Súlyos soványság.")
 	
@@ -67,6 +67,8 @@ def idos_sport():
 	
 def pubertas():
 	tmi = 1.3*testsuly / magassag**2
+	
+	print("Testtömegindex:", tmi)
 	
 	if tmi < 16:
 		print("Súlyos soványság.")
@@ -95,6 +97,8 @@ def pubertas():
 def csecsemo():
 	tmi = 1.3*testsuly / magassag**3
 	
+	print("Testtömegindex:", tmi)
+	
 	if tmi < 16:
 		print("Súlyos soványság.")
 	
@@ -119,7 +123,7 @@ def csecsemo():
 	if tmi > 40:
 		print("III.fokú elhízás.")
 	
-if sport == "Igen" and kor == 50:
+if sport == "Igen" or kor == 50:
 	idos_sport()
 
 	
@@ -128,6 +132,6 @@ if kor > 12 and kor < 19:
 
 if kor < 0.5:
 	csecsemo()
-	
-else:
+
+if kor > 0.6 and kor < 12 and kor > 19 and not kor == 50:
 	normal()
